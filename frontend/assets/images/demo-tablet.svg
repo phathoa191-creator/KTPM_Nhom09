@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" role="img" aria-label="Máy tính bảng minh họa demo">
+<rect width="480" height="460" rx="32" fill="#fff1f3"/><ellipse cx="240" cy="370" rx="125" ry="16" fill="#edd3d9"/>
+<rect x="130" y="55" width="220" height="310" rx="22" fill="#343b4b"/><rect x="141" y="71" width="198" height="277" rx="12" fill="#ffc2cd"/>
+<path d="M141 255L285 71H339V168L200 348H141Z" fill="#d70018"/><circle cx="240" cy="63" r="3" fill="#a9b2c4"/>
+<text x="240" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#9e2437">TABLET · DEMO</text></svg>

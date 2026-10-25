@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" role="img" aria-label="Đồng hồ minh họa demo">
+<rect width="480" height="460" rx="32" fill="#fff1f3"/><ellipse cx="240" cy="373" rx="100" ry="14" fill="#edd3d9"/>
+<rect x="193" y="45" width="94" height="325" rx="32" fill="#ee7a8f"/><rect x="156" y="125" width="168" height="171" rx="42" fill="#343b4b"/>
+<rect x="166" y="135" width="148" height="151" rx="33" fill="#172234"/><circle cx="240" cy="210" r="54" fill="none" stroke="#d70018" stroke-width="10"/>
+<path d="M240 173V212L265 229" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round"/><rect x="324" y="183" width="9" height="27" rx="4" fill="#6c778e"/>
+<text x="240" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#9e2437">WATCH · DEMO</text></svg>

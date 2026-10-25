@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quản lý giỏ hàng | CellphoneS Testing Demo</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/app.js" defer>
+</script>
+<script src="assets/auth.js" defer>
+</script>
+<script src="assets/cart-manage.js" defer>
+</script>
+</head>
+<body class="cart-page">
+<div class="top-strip">WEBSITE DEMO PHỤC VỤ HỌC TẬP <span>Không bán hàng thực tế · Không thanh toán trực tuyến</span>
+</div>
+<header class="store-header">
+<div class="header-inner">
+<a class="logo" href="index.html">cellphone<span>S</span>
+<small>TESTING DEMO</small>
+</a>
+<a class="category-link" href="search.html">☰ <span>Danh mục</span>
+</a>
+<form class="header-search" action="search.html" method="get" role="search">
+<label class="sr-only" for="header-query">Bạn cần tìm gì?</label>
+<input id="header-query" name="q" placeholder="Bạn cần tìm điện thoại nào?" autocomplete="off">
+<button type="submit" aria-label="Tìm kiếm sản phẩm">⌕</button>
+</form>
+<div class="header-links">
+<a href="login.html">Đăng nhập</a>
+<a href="register.html">Đăng ký</a>
+<a href="account.html">♙ Tài khoản</a>
+<a href="cart.html">▱ Giỏ hàng</a>
+</div>
+</div>
+</header>
+<nav class="store-nav" aria-label="Điều hướng">
+<a href="index.html">Trang chủ</a>
+<a href="search.html">Điện thoại</a>
+<a href="cart-manage.html">Quản lý giỏ</a>
+<a href="account.html">Tài khoản của tôi</a>
+<a href="index.html#use-cases">10 chức năng kiểm thử</a>
+<a href="admin/products.html">Khu quản trị ↗</a>
+</nav>
+<main>
+<div class="notice" data-testid="skeleton-notice">
+<strong>DEMO HỌC TẬP</strong> Giỏ hàng tài khoản của bạn · Không thanh toán thực tế.</div>
+<span class="badge">UC-09</span>
+<h1>Quản lý giỏ hàng</h1>
+<p class="status" role="status" aria-live="polite" data-testid="page-feedback">
+</p>
+<a class="button" href="login.html" data-testid="cart-login" hidden>Đăng nhập để xem giỏ</a>
+<div class="panel" data-testid="cart-empty" hidden>
+<h2>Giỏ hàng trống</h2>
+<p>Khám phá sản phẩm và thêm những món bạn quan tâm.</p>
+<a class="button" href="search.html">Tìm sản phẩm</a>
+</div>
+<section class="panel" data-testid="cart-panel" hidden>
+<p data-testid="cart-count">
+</p>
+<div class="table-wrap">
+<table data-testid="cart-items">
+<thead>
+<tr>
+<th>Sản phẩm</th>
+<th>Đơn giá</th>
+<th>Số lượng</th>
+<th>Thành tiền</th><th>Thao tác</th>
+</tr>
+</thead>
+<tbody data-testid="cart-item-rows">
+</tbody>
+</table>
+</div>
+<p data-testid="cart-total">
+</p>
+<p class="notice" data-testid="cart-warning" hidden>Giỏ có sản phẩm hết hàng, không đủ tồn kho hoặc đã ngừng kinh doanh. Tổng tiền vẫn gồm các dòng này; hãy kiểm tra lại trước khi đặt hàng.</p>
+<p class="muted">Giá và tồn kho hiện tại được kiểm tra từ hệ thống. Thêm vào giỏ không giữ chỗ sản phẩm.</p>
+<a class="button" href="checkout.html" data-testid="cart-checkout-link">Đặt hàng</a> <a href="cart.html">Xem giỏ hàng</a> <a href="cart-manage.html" data-testid="cart-refresh">Tải lại giỏ hàng</a>
+<p class="muted">Chỉ hỗ trợ cập nhật số lượng và xóa từng sản phẩm. Chưa hỗ trợ xóa toàn bộ giỏ bằng một thao tác.</p>
+</section>
+</main>
+<footer class="store-footer">
+<div>
+<a class="footer-brand" href="index.html">CellphoneS Testing Demo</a>
+<p>Không gian học tập & thực hành kiểm thử phần mềm.</p>
+<p>Giao diện minh họa độc lập, không phải website CellphoneS chính thức.</p>
+</div>
+<div>
+<strong>Khám phá</strong>
+<a href="search.html">Sản phẩm demo</a>
+<a href="cart.html">Giỏ hàng</a>
+<a href="account.html">Tài khoản</a>
+</div>
+<div>
+<strong>Dành cho học tập</strong>
+<a href="index.html#use-cases">10 use case Selenium</a>
+<a href="admin/products.html">Quản trị sản phẩm</a>
+<p>Giỏ hàng từ SQL Server.</p>
+</div>
+</footer>
+</body>
+</html>

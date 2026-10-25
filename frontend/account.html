@@ -1,0 +1,21 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quản lý tài khoản | CellphoneS Testing Demo</title><link rel="stylesheet" href="assets/styles.css"><script src="assets/app.js" defer></script><script src="assets/auth.js" defer></script><script src="assets/account.js" defer></script></head><body class="account-page"><div class="top-strip">WEBSITE DEMO PHỤC VỤ HỌC TẬP <span>Không bán hàng thực tế · Không thanh toán trực tuyến</span></div><header class="store-header"><div class="header-inner"><a class="logo" href="index.html">cellphone<span>S</span><small>TESTING DEMO</small></a><a class="category-link" href="search.html">☰ <span>Danh mục</span></a><form class="header-search" action="search.html" method="get" role="search"><label class="sr-only" for="header-query">Bạn cần tìm gì?</label><input id="header-query" name="q" placeholder="Bạn cần tìm điện thoại nào?" autocomplete="off"><button type="submit" aria-label="Tìm kiếm sản phẩm">⌕</button></form><div class="header-links"><a href="login.html">Đăng nhập</a><a href="register.html">Đăng ký</a><a href="account.html">♙ Tài khoản</a><a href="cart.html">▱ Giỏ hàng</a></div></div></header><nav class="store-nav" aria-label="Điều hướng"><a href="index.html">Trang chủ</a><a href="search.html">Điện thoại</a><a href="cart-manage.html">Quản lý giỏ</a><a href="account.html">Tài khoản của tôi</a><a href="index.html#use-cases">10 chức năng kiểm thử</a><a href="admin/products.html">Khu quản trị ↗</a></nav><main>
+<div class="notice" data-testid="skeleton-notice"><strong>DEMO HỌC TẬP</strong> Thông tin tài khoản từ hệ thống.</div>
+<span class="badge">UC-08</span><h1>Quản lý tài khoản</h1>
+<p role="status" aria-live="polite" data-testid="page-feedback"></p>
+<a href="login.html" data-testid="account-login" hidden>Đăng nhập để xem tài khoản</a>
+<form data-testid="account-form" hidden novalidate>
+<label for="account-email">Email đăng nhập (chỉ đọc)</label><input id="account-email" data-testid="account-email" type="email" readonly>
+<label for="account-name">Họ tên</label><input id="account-name" data-testid="account-name" name="fullName" maxlength="100" autocomplete="name" aria-describedby="account-name-error">
+<p id="account-name-error" data-testid="account-fullName-error"></p>
+<label for="account-phone">Số điện thoại</label><input id="account-phone" data-testid="account-phone" name="phone" type="tel" maxlength="10" autocomplete="tel" aria-describedby="account-phone-error">
+<p id="account-phone-error" data-testid="account-phone-error"></p>
+<label for="account-address">Địa chỉ</label><textarea id="account-address" data-testid="account-address" name="address" maxlength="500" autocomplete="street-address" aria-describedby="account-address-error"></textarea>
+<p id="account-address-error" data-testid="account-address-error"></p>
+<p>Để trống số điện thoại hoặc địa chỉ nếu muốn xóa thông tin đó.</p>
+<button type="submit" data-testid="account-save" disabled>Lưu thông tin</button>
+<p role="status" aria-live="polite" data-testid="account-form-feedback"></p>
+</form>
+<p>Đổi mật khẩu chưa được hỗ trợ trong đợt triển khai này.</p>
+<form data-testid="password-form" hidden inert><input data-testid="password-current" type="password" disabled><input data-testid="password-new" type="password" disabled><input data-testid="password-confirm" type="password" disabled><button data-testid="password-save" disabled>Đổi mật khẩu</button><p data-testid="password-form-feedback">Chưa hỗ trợ.</p></form>
+</main>
+<footer class="store-footer"><div><a class="footer-brand" href="index.html">CellphoneS Testing Demo</a><p>Không gian học tập & thực hành kiểm thử phần mềm.</p><p>Giao diện minh họa độc lập, không phải website CellphoneS chính thức.</p></div><div><strong>Khám phá</strong><a href="search.html">Sản phẩm demo</a><a href="cart.html">Giỏ hàng</a><a href="account.html">Tài khoản</a></div><div><strong>Dành cho học tập</strong><a href="index.html#use-cases">10 use case Selenium</a><a href="admin/products.html">Quản trị sản phẩm</a><p>Chưa kết nối cơ sở dữ liệu.</p></div></footer></body></html>

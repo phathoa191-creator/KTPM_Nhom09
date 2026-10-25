@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" role="img" aria-label="Laptop minh họa demo">
+<rect width="480" height="460" rx="32" fill="#fff1f3"/><ellipse cx="240" cy="368" rx="175" ry="18" fill="#edd3d9"/>
+<rect x="92" y="105" width="296" height="208" rx="16" fill="#343b4b"/><rect x="105" y="118" width="270" height="179" rx="5" fill="#d70018"/>
+<path d="M105 240L230 118H375V188L267 297H105Z" fill="#f75b73"/><path d="M92 313H388L425 350Q425 362 408 362H72Q55 362 55 350Z" fill="#a9b2c4"/>
+<path d="M207 313H273L281 330H199Z" fill="#6c778e"/><text x="240" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#9e2437">LAPTOP · DEMO</text></svg>

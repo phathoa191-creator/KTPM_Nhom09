@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Đăng ký tài khoản | CellphoneS Testing Demo</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/app.js" defer>
+</script>
+<script src="assets/auth.js" defer></script></head>
+<body class="register-page">
+<div class="top-strip">WEBSITE DEMO PHỤC VỤ HỌC TẬP <span>Không bán hàng thực tế · Không thanh toán trực tuyến</span>
+</div>
+<header class="store-header">
+<div class="header-inner">
+<a class="logo" href="index.html">cellphone<span>S</span>
+<small>TESTING DEMO</small>
+</a>
+<a class="category-link" href="search.html">☰ <span>Danh mục</span>
+</a>
+<form class="header-search" action="search.html" method="get" role="search">
+<label class="sr-only" for="header-query">Bạn cần tìm gì?</label>
+<input id="header-query" name="q" placeholder="Bạn cần tìm điện thoại nào?" autocomplete="off">
+<button type="submit" aria-label="Tìm kiếm sản phẩm">⌕</button>
+</form>
+<div class="header-links">
+<a href="login.html">Đăng nhập</a>
+<a href="register.html">Đăng ký</a>
+<a href="account.html">♙ Tài khoản</a>
+<a href="cart.html">▱ Giỏ hàng</a>
+</div>
+</div>
+</header>
+<nav class="store-nav" aria-label="Điều hướng">
+<a href="index.html">Trang chủ</a>
+<a href="search.html">Điện thoại</a>
+<a href="cart-manage.html">Quản lý giỏ</a>
+<a href="account.html">Tài khoản của tôi</a>
+<a href="index.html#use-cases">10 chức năng kiểm thử</a>
+<a href="admin/products.html">Khu quản trị ↗</a>
+</nav>
+<main>
+<div class="notice" data-testid="skeleton-notice">
+<strong>DEMO HỌC TẬP</strong> Đăng ký tài khoản phục vụ kiểm thử.</div>
+<span class="badge">UC-01</span>
+<h1>Đăng ký tài khoản</h1>
+<div class="auth-layout">
+<aside class="auth-story">
+<span class="eyebrow">CELLPHONES TESTING DEMO</span>
+<h2>Công nghệ trong tầm tay bạn.</h2>
+<p>Khám phá sản phẩm, trải nghiệm giỏ hàng và thực hành kiểm thử tự động.</p>
+<img src="assets/images/oppo-reno.svg" alt="Điện thoại minh họa" width="480" height="460">
+</aside>
+<div class="auth-form">
+<form data-testid="register-form" novalidate>
+<label for="register-name">Họ tên</label>
+<input id="register-name" name="fullname" autocomplete="name" maxlength="100" required type="text" data-testid="register-name" >
+<label for="register-address">Địa chỉ</label>
+<input id="register-address" name="addr" type="text" data-testid="register-address" autocomplete="street-address" maxlength="500" required>
+<label for="register-email">Email</label>
+<input id="register-email" name="uname" autocomplete="email" maxlength="254" required type="email" data-testid="register-email" >
+<label for="register-password">Mật khẩu</label>
+<input id="register-password" name="pwd" autocomplete="new-password" minlength="8" maxlength="1024" required type="password" data-testid="register-password" >
+<label for="register-confirm-password">Nhập lại mật khẩu</label>
+<input id="register-confirm-password" name="password_confirm" autocomplete="new-password" maxlength="1024" required type="password" data-testid="register-confirm-password" >
+<button type="submit" data-testid="register-submit">Đăng ký</button>
+<p class="status" role="status" aria-live="polite" data-testid="register-form-feedback">
+</p>
+</form>
+<p class="auth-alternate">Đã có tài khoản? <a href="login.html">Đăng nhập</a>
+</p>
+<p class="status" role="status" data-testid="page-feedback">
+</p>
+</div>
+</div>
+</main>
+<footer class="store-footer">
+<div>
+<a class="footer-brand" href="index.html">CellphoneS Testing Demo</a>
+<p>Không gian học tập & thực hành kiểm thử phần mềm.</p>
+<p>Giao diện minh họa độc lập, không phải website CellphoneS chính thức.</p>
+</div>
+<div>
+<strong>Khám phá</strong>
+<a href="search.html">Sản phẩm demo</a>
+<a href="cart.html">Giỏ hàng</a>
+<a href="account.html">Tài khoản</a>
+</div>
+<div>
+<strong>Dành cho học tập</strong>
+<a href="index.html#use-cases">10 use case Selenium</a>
+<a href="admin/products.html">Quản trị sản phẩm</a>
+<p>UC-01: Đăng ký tài khoản thử nghiệm.</p>
+</div>
+</footer>
+</body>
+</html>

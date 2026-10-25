@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="460" viewBox="0 0 480 460" role="img" aria-label="Tai nghe minh họa demo">
+<rect width="480" height="460" rx="32" fill="#fff1f3"/><ellipse cx="240" cy="365" rx="140" ry="17" fill="#edd3d9"/>
+<path d="M120 265V205C120 55 360 55 360 205V265" fill="none" stroke="#343b4b" stroke-width="31"/>
+<path d="M122 205C122 63 358 63 358 205" fill="none" stroke="#ed526d" stroke-width="12"/>
+<rect x="91" y="216" width="75" height="124" rx="30" fill="#d70018"/><rect x="314" y="216" width="75" height="124" rx="30" fill="#d70018"/>
+<rect x="144" y="232" width="26" height="93" rx="13" fill="#343b4b"/><rect x="310" y="232" width="26" height="93" rx="13" fill="#343b4b"/>
+<text x="240" y="406" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#9e2437">AUDIO · DEMO</text></svg>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tìm kiếm sản phẩm | CellphoneS Testing Demo</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/app.js" defer>
+</script>
+<script src="assets/search.js" defer>
+</script>
+<script src="assets/auth.js" defer></script></head>
+<body class="search-page">
+<div class="top-strip">WEBSITE DEMO PHỤC VỤ HỌC TẬP <span>Không bán hàng thực tế · Không thanh toán trực tuyến</span>
+</div>
+<header class="store-header">
+<div class="header-inner">
+<a class="logo" href="index.html">cellphone<span>S</span>
+<small>TESTING DEMO</small>
+</a>
+<a class="category-link" href="search.html">☰ <span>Danh mục</span>
+</a>
+<form class="header-search" action="search.html" method="get" role="search">
+<label class="sr-only" for="header-query">Bạn cần tìm gì?</label>
+<input id="header-query" name="q" placeholder="Bạn cần tìm điện thoại nào?" autocomplete="off">
+<button type="submit" aria-label="Tìm kiếm sản phẩm">⌕</button>
+</form>
+<div class="header-links">
+<a href="login.html">Đăng nhập</a>
+<a href="register.html">Đăng ký</a>
+<a href="account.html">♙ Tài khoản</a>
+<a href="cart.html">▱ Giỏ hàng</a>
+</div>
+</div>
+</header>
+<nav class="store-nav" aria-label="Điều hướng">
+<a href="index.html">Trang chủ</a>
+<a href="search.html">Điện thoại</a>
+<a href="cart-manage.html">Quản lý giỏ</a>
+<a href="account.html">Tài khoản của tôi</a>
+<a href="index.html#use-cases">10 chức năng kiểm thử</a>
+<a href="admin/products.html">Khu quản trị ↗</a>
+</nav>
+<main>
+<div class="notice" data-testid="skeleton-notice">
+<strong>DEMO HỌC TẬP</strong> Danh mục sản phẩm từ SQL Server · Không bán hàng thực tế.</div>
+<span class="badge">UC-02</span>
+<h1>Tìm kiếm sản phẩm</h1>
+<p class="muted">Tìm điện thoại yêu thích theo tên hoặc một phần tên sản phẩm.</p>
+<form data-testid="search-form" role="search" novalidate>
+<label for="search-keyword">Tên sản phẩm</label>
+<input id="search-keyword" name="q" type="search" data-testid="search-keyword" placeholder="Ví dụ: iPhone, Samsung, Galaxy..." maxlength="200" autocomplete="off">
+<button type="submit" data-testid="search-submit">Tìm kiếm</button>
+<p class="status" role="status" aria-live="polite" data-testid="search-form-feedback">
+</p>
+</form>
+<div class="catalog-toolbar">
+<strong>Sản phẩm phù hợp</strong>
+<span data-testid="search-summary">
+</span>
+</div>
+<section class="product-grid" aria-label="Kết quả tìm kiếm" data-testid="search-results">
+</section>
+<p data-testid="search-empty" class="search-empty" hidden>
+</p>
+<nav class="search-pagination" data-testid="search-pagination" aria-label="Phân trang sản phẩm">
+</nav>
+<p class="status" role="status" data-testid="page-feedback">
+</p>
+</main>
+<footer class="store-footer">
+<div>
+<a class="footer-brand" href="index.html">CellphoneS Testing Demo</a>
+<p>Không gian học tập & thực hành kiểm thử phần mềm.</p>
+<p>Giao diện minh họa độc lập, không phải website CellphoneS chính thức.</p>
+</div>
+<div>
+<strong>Khám phá</strong>
+<a href="search.html">Sản phẩm demo</a>
+<a href="cart.html">Giỏ hàng</a>
+<a href="account.html">Tài khoản</a>
+</div>
+<div>
+<strong>Dành cho học tập</strong>
+<a href="index.html#use-cases">10 use case Selenium</a>
+<a href="admin/products.html">Quản trị sản phẩm</a>
+<p>UC-02: Tìm kiếm sản phẩm từ cơ sở dữ liệu.</p>
+</div>
+</footer>
+</body>
+</html>

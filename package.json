@@ -1,0 +1,22 @@
+{
+  "name": "cellphones-testing-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Khung giao diện cho 10 use case kiểm thử Selenium",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "test": "node --test tests/backend/*.test.js tests/frontend/*.test.js",
+    "test:selenium": "node --test --test-concurrency=1 tests/selenium/register.test.js",
+    "check": "node --check backend/src/server.js && node --check frontend/assets/app.js && node --check backend/src/auth/register.js && node --check backend/src/auth/users.js && node --check backend/src/auth/password.js && node --check backend/src/products/search.js && node --check frontend/assets/search.js && node --check backend/src/products/detail.js && node --check frontend/assets/product-detail.js && node --check backend/src/auth/login.js && node --check frontend/assets/auth.js && node --check backend/src/cart/cart.js && node --check frontend/assets/cart.js && node --check backend/src/orders/orders.js && node --check frontend/assets/checkout.js && node --check backend/src/account/account.js && node --check frontend/assets/account.js && node --check frontend/assets/cart-manage.js && node --check backend/src/admin/products.js && node --check frontend/assets/admin-products.js"
+  },
+  "engines": {
+    "node": ">=24.11.1"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "mssql": "^12.0.0"
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.51.0"
+  }
+}

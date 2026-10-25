@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chi tiết sản phẩm | CellphoneS Testing Demo</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="assets/app.js" defer>
+</script>
+<script src="assets/product-detail.js" defer>
+</script>
+<script src="assets/auth.js" defer></script></head>
+<body class="product-detail-page">
+<div class="top-strip">WEBSITE DEMO PHỤC VỤ HỌC TẬP <span>Không bán hàng thực tế · Không thanh toán trực tuyến</span>
+</div>
+<header class="store-header">
+<div class="header-inner">
+<a class="logo" href="index.html">cellphone<span>S</span>
+<small>TESTING DEMO</small>
+</a>
+<a class="category-link" href="search.html">☰ <span>Danh mục</span>
+</a>
+<form class="header-search" action="search.html" method="get" role="search">
+<label class="sr-only" for="header-query">Bạn cần tìm gì?</label>
+<input id="header-query" name="q" placeholder="Bạn cần tìm điện thoại nào?" autocomplete="off">
+<button type="submit" aria-label="Tìm kiếm sản phẩm">⌕</button>
+</form>
+<div class="header-links">
+<a href="login.html">Đăng nhập</a>
+<a href="register.html">Đăng ký</a>
+<a href="account.html">♙ Tài khoản</a>
+<a href="cart.html">▱ Giỏ hàng</a>
+</div>
+</div>
+</header>
+<nav class="store-nav" aria-label="Điều hướng">
+<a href="index.html">Trang chủ</a>
+<a href="search.html">Điện thoại</a>
+<a href="cart-manage.html">Quản lý giỏ</a>
+<a href="account.html">Tài khoản của tôi</a>
+<a href="index.html#use-cases">10 chức năng kiểm thử</a>
+<a href="admin/products.html">Khu quản trị ↗</a>
+</nav>
+<main>
+<div class="notice" data-testid="skeleton-notice">
+<strong>DEMO HỌC TẬP</strong> Thông tin từ cơ sở dữ liệu · Hình ảnh và giá phục vụ học tập.</div>
+<a href="search.html" data-testid="detail-back-to-search">← Tìm kiếm sản phẩm</a>
+<p>
+<span class="badge">UC-03</span>
+</p>
+<h1>Chi tiết sản phẩm</h1>
+<p class="status" role="status" aria-live="polite" data-testid="page-feedback">
+</p>
+<section class="panel" data-testid="product-detail" hidden>
+<div class="detail-gallery">
+<div data-testid="product-images">
+</div>
+<p class="muted">Hình ảnh minh họa demo.</p>
+</div>
+<div class="detail-summary">
+<p class="badge" data-testid="product-category">
+</p>
+<h2 data-testid="product-name">
+</h2>
+<p class="muted">SKU: <span data-testid="product-sku">
+</span>
+</p>
+<p class="price" data-testid="product-price">
+</p>
+<p class="product-availability" data-testid="product-availability">
+</p>
+<p data-testid="product-stock">
+</p>
+<h3>Mô tả sản phẩm</h3>
+<p class="detail-description" data-testid="product-description">
+</p>
+<form data-testid="add-cart-form" novalidate>
+<label for="add-cart-quantity">Số lượng</label>
+<input id="add-cart-quantity" data-testid="add-cart-quantity" type="number" value="1" min="1" max="99" step="1" required>
+<button type="submit" data-testid="detail-add-to-cart" disabled>Thêm vào giỏ</button>
+<p class="status" role="status" aria-live="polite" data-testid="add-cart-form-feedback"></p>
+<a href="login.html" data-testid="add-cart-login" hidden>Đăng nhập để thêm sản phẩm</a>
+<a href="cart.html" data-testid="detail-view-cart">Xem giỏ hàng →</a>
+</form>
+<div class="delivery-note">Website demo phục vụ học tập, không bán hàng thực tế.</div>
+</div>
+</section>
+</main>
+<footer class="store-footer">
+<div>
+<a class="footer-brand" href="index.html">CellphoneS Testing Demo</a>
+<p>Không gian học tập & thực hành kiểm thử phần mềm.</p>
+<p>Giao diện minh họa độc lập, không phải website CellphoneS chính thức.</p>
+</div>
+<div>
+<strong>Khám phá</strong>
+<a href="search.html">Sản phẩm demo</a>
+<a href="cart.html">Giỏ hàng</a>
+<a href="account.html">Tài khoản</a>
+</div>
+<div>
+<strong>Dành cho học tập</strong>
+<a href="index.html#use-cases">10 use case Selenium</a>
+<a href="admin/products.html">Quản trị sản phẩm</a>
+<p>Thông tin sản phẩm từ SQL Server.</p>
+</div>
+</footer>
+</body>
+</html>
