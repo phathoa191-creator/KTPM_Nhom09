@@ -170,3 +170,22 @@ test('TC_SEARCH_04: Tìm kiếm không làm tải lại tài liệu', async () =
     'Tìm kiếm không được tải lại toàn bộ trang'
   );
 });
+test('TC_SEARCH_05: Tìm kiếm thành công với từ khóa hợp lệ', async () => {
+  const keyword = await visibleElement('search-keyword');
+  await keyword.clear();
+  await keyword.sendKeys('iphone');
+  await (await visibleElement('search-submit')).click();
+
+  await waitForSearch();
+
+  const results = await driver.findElements(
+    By.css('[data-testid^="product-detail-"]')
+  );
+
+  assert.ok(results.length > 0, 'Phải hiển thị sản phẩm phù hợp với từ khóa');
+
+  assert.equal(
+    await driver.executeScript('return new URL(location.href).searchParams.get("q")'),
+    'iphone'
+  );
+});

@@ -1,5 +1,7 @@
+
 const { test, before, after } = require('node:test');
 const assert = require('node:assert/strict');
+const { randomUUID } = require('node:crypto');
 const { Builder, By, until } = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -52,4 +54,49 @@ test('UC-05 TC02: Giỏ hàng không hiển thị tổng tiền sai khi chưa đ
 
   const panel = await driver.findElement(el('cart-panel'));
   assert.equal(await panel.isDisplayed(), false);
+});
+
+test('UC-05 TC03: Xem giỏ hàng khi đã đăng nhập', async () => {
+  const email = `selenium-uc05-${randomUUID()}@example.test`;
+  const password = 'Selenium-Test-123!';
+
+  // Đăng ký tài khoản mới
+  await driver.get(`${baseUrl}/register.html`);
+
+  await driver.findElement(el('register-name')).sendKeys('Selenium UC05 Test');
+  await driver.findElement(el('register-address')).sendKeys('123 Test Street');
+  await driver.findElement(el('register-email')).sendKeys(email);
+  await driver.findElement(el('register-password')).sendKeys(password);
+  await driver.findElement(el('register-confirm-password')).sendKeys(password);
+  await driver.findElement(el('register-submit')).click();
+
+  await driver.wait(until.urlContains('/login.html'), 15000);
+
+  // Đăng nhập và yêu cầu quay lại giỏ hàng
+  await driver.get(`${baseUrl}/login.html?returnTo=%2Fcart.html`);
+
+  await driver.findElement(el('login-email')).sendKeys(email);
+  await driver.findElement(el('login-password')).sendKeys(password);
+  await driver.findElement(el('login-submit')).click();
+
+  // Chờ chuyển đến giỏ hàng
+  await driver.wait(until.urlContains('/cart.html'), 15000);
+
+  // Chờ trạng thái giỏ hàng được cập nhật
+  await driver.wait(async () => {
+    const empty = await driver.findElement(el('cart-empty'));
+    const panel = await driver.findElement(el('cart-panel'));
+    return await empty.isDisplayed() || await panel.isDisplayed();
+  }, 15000);
+
+  const login = await driver.findElement(el('cart-login'));
+  const empty = await driver.findElement(el('cart-empty'));
+  const panel = await driver.findElement(el('cart-panel'));
+
+  assert.equal(await login.isDisplayed(), false, 'Không được yêu cầu đăng nhập lại');
+
+  assert.ok(
+    await empty.isDisplayed() || await panel.isDisplayed(),
+    'Giỏ hàng phải hiển thị trạng thái rỗng hoặc danh sách sản phẩm'
+  );
 });
