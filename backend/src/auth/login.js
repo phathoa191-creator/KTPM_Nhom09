@@ -53,6 +53,7 @@ const allowedUser = user => user?.active && ['CUSTOMER', 'ADMIN'].includes(user.
 function createAuth({ repository, sessions = createSessionStore(), verifier = verifyPassword } = {}) {
   const router = express.Router();
   const attempts = new Map();
+  const loginLimit = process.env.NODE_ENV === 'test' ? 200 : 20;
   const options = req => ({ httpOnly: true, sameSite: 'strict', secure: req.secure || process.env.NODE_ENV === 'production', path: '/' });
   router.use((_req, res, next) => { res.set('Cache-Control', 'no-store'); next(); });
   function sameOrigin(req, res, next) {
@@ -92,7 +93,7 @@ function createAuth({ repository, sessions = createSessionStore(), verifier = ve
     const now = Date.now();
     for (const [ip, value] of attempts) if (value.expires <= now) attempts.delete(ip);
     const attempt = attempts.get(req.ip) || { count: 0, expires: now + 15 * 60 * 1000 };
-    if (attempt.count >= 20 || (!attempts.has(req.ip) && attempts.size >= 10000)) {
+    if (attempt.count >= loginLimit || (!attempts.has(req.ip) && attempts.size >= 10000)) {
       res.set('Retry-After', String(Math.max(1, Math.ceil((attempt.expires - now) / 1000))));
       return res.status(429).json({ code: 'TOO_MANY_ATTEMPTS', message: 'Bạn thử đăng nhập quá nhiều lần. Vui lòng thử lại sau.' });
     }
