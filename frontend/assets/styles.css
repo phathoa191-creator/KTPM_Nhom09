@@ -19,3 +19,7 @@
 .header-links [hidden]{display:none!important}.auth-session{display:flex;align-items:center;gap:10px;font-size:11px}.auth-session button{font-size:11px;padding:7px 10px;margin:0}.auth-session a{max-width:210px;overflow-wrap:anywhere}
 
 .cart-page [hidden]{display:none!important}.cart-product small{display:block}.cart-product [data-state]:not([data-state=available]){color:#b42318}.cart-page [data-testid=cart-total]{font-size:22px;font-weight:700;color:#d70018}.detail-summary form{padding:16px;margin-top:20px}.detail-summary form input{max-width:120px}
+/* BUG-ACC-01: An cac phan tu co thuoc tinh hidden */
+[hidden] {
+    display: none !important;
+}

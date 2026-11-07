@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quản lý sản phẩm - CellphoneS Demo</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Quản lý sản phẩm - ADMIN</h1>
+    <p>Trang quản trị phục vụ kiểm thử Selenium UC-10.</p>
+
+    <p data-testid="page-feedback" role="status"></p>
+
+    <section class="panel" data-testid="admin-panel" hidden>
+      <h2>Danh sách sản phẩm</h2>
+
+      <form data-testid="admin-search-form">
+        <input
+          data-testid="admin-query"
+          type="search"
+          placeholder="Tìm theo tên hoặc SKU"
+        >
+
+        <select data-testid="admin-filter">
+          <option value="all">Tất cả</option>
+          <option value="true">Đang kinh doanh</option>
+          <option value="false">Ngừng kinh doanh</option>
+        </select>
+
+        <button type="submit">Tìm kiếm</button>
+      </form>
+
+      <button type="button" data-testid="admin-reload">
+        Tải lại danh sách
+      </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>SKU</th>
+            <th>Tên sản phẩm</th>
+            <th>Danh mục</th>
+            <th>Giá</th>
+            <th>Tồn kho</th>
+            <th>Trạng thái</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody data-testid="admin-product-rows"></tbody>
+      </table>
+
+      <p data-testid="admin-pagination"></p>
+
+      <button type="button" data-testid="admin-prev">
+        Trang trước
+      </button>
+      <button type="button" data-testid="admin-next">
+        Trang sau
+      </button>
+
+      <h2>Thêm / Sửa sản phẩm</h2>
+
+      <button type="button" data-testid="admin-product-new">
+        Nhập sản phẩm mới
+      </button>
+
+      <form data-testid="admin-product-form">
+        <label>
+          SKU
+          <input data-testid="admin-product-sku" required>
+        </label>
+
+        <label>
+          Slug
+          <input data-testid="admin-product-slug" required>
+        </label>
+
+        <label>
+          Tên sản phẩm
+          <input data-testid="admin-product-name" required>
+        </label>
+
+        <label>
+          Danh mục
+          <select data-testid="admin-product-category" required></select>
+        </label>
+
+        <label>
+          Giá bán
+          <input
+            data-testid="admin-product-price"
+            type="number"
+            min="0"
+            step="0.01"
+            required
+          >
+        </label>
+
+        <label>
+          Tồn kho
+          <input
+            data-testid="admin-product-stock"
+            type="number"
+            min="0"
+            required
+          >
+        </label>
+
+        <label>
+          Mô tả
+          <textarea data-testid="admin-product-description"></textarea>
+        </label>
+
+        <label>
+          URL ảnh
+          <input data-testid="admin-product-image-url" type="url">
+        </label>
+
+        <label>
+          Mô tả ảnh
+          <input data-testid="admin-product-image-alt">
+        </label>
+
+        <p data-testid="admin-product-form-feedback" role="status"></p>
+
+        <button type="submit" data-testid="admin-product-create">
+          Thêm sản phẩm
+        </button>
+
+        <button type="submit" data-testid="admin-product-save" disabled>
+          Lưu thay đổi
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <script src="assets/admin-products.js"></script>
+</body>
+</html>
