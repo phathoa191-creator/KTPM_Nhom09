@@ -1,0 +1,21 @@
+﻿BAO CAO KET QUA KIEM THU SELENIUM
+=================================
+
+Du an: KTPM_Nhom09 - Website CellphoneS
+Loai kiem thu: Selenium WebDriver
+Tong so test: 40
+So test PASS: 40
+So test FAIL: 0
+So test SKIP: 0
+So test CANCELLED: 0
+Thoi gian thuc thi: 79076.2485 ms
+
+KET LUAN:
+Tat ca 40 test case Selenium deu thuc thi thanh cong.
+Khong co test case that bai hoac bi bo qua.
+
+Lenh chay kiem thu:
+node --test --test-concurrency=1 [danh sach file test trong tests/selenium]
+
+Luu y:
+Bao cao nay ghi lai ket qua cua lan chay kiem thu da xac nhan.
